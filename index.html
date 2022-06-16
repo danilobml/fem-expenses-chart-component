@@ -4,14 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-    <link rel="stylesheet" href="./src/reset.css" />
-    <link rel="stylesheet" href="./src/styles.css" />
-    <script defer src="./src/scripts.js"></script>
     <title>Frontend Mentor | Expenses chart component</title>
+    <!-- Reset: -->
+    <link rel="stylesheet" href="./src/reset.css" />
+    <!-- My styles and scripts -->
+    <link rel="stylesheet" href="./src/styles.css" />
+    <script defer type="module" src="./src/scripts.js"></script>
+    <!-- Font: -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </head>
   <body>
-    My balance $921.48 Spending - Last 7 days mon tue wed thu fri sat sun Total this month $478.33 +2.4% from last month
+    <div class="main-container container-fluid d-flex flex-column justify-content-center align-items-center vh-100">
+      <div class="container-balance container mx-auto text-center d-flex justify-content-between align-items-center p-2">
+        <div>
+          <p class="my-balance mb-0 mt-2 ms-2">My balance</p>
+          <p class="balance-value mb-2 text-start ms-3 fw-bold">$921.48</p>
+        </div>
+        <div><img src="./images/logo.svg" alt="logo" /></div>
+      </div>
+      <div class="container-chart container p-3 mt-3">
+        <h1 class="text-center fw-bold">Spending - Last 7 days</h1>
+        <div class="d-flex align-items-end justify-content-around mt-5">
+          <div class="day text-center">mon</div>
+          <div class="day text-center">tue</div>
+          <div class="day text-center">wed</div>
+          <div class="day text-center">thu</div>
+          <div class="day text-center">fri</div>
+          <div class="day text-center">sat</div>
+          <div class="day text-center">sun</div>
+        </div>
+        <hr />
+        <div class="d-flex justify-content-between">
+          <div>
+            <p class="total-text mb-0">Total this month</p>
+            <p class="total-value mb-0">$478.33</p>
+          </div>
+          <div>
+            <p class="percent mb-0">+2.4%</p>
+            <p class="last-month mb-0">from last month</p>
+          </div>
+        </div>
+      </div>
 
-    <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/danilobml">Danilobml</a>.</div>
+      <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/danilobml">Danilobml</a>.</div>
+    </div>
   </body>
 </html>

@@ -1,3 +1,15 @@
+:root {
+  /* Custom variables: */
+--SoftRed: hsl(10, 79%, 65%);
+--Cyan: hsl(186, 34%, 60%);
+--DarkBrown: hsl(25, 47%, 15%);
+--MediumBrown: hsl(28, 10%, 53%);
+--Cream: hsl(27, 66%, 92%);
+--PaleOrange: hsl(33, 100%, 98%);
+font-size: 18px;
+font-family: 'DM Sans', sans-serif;
+}
+
 /* Set border-box*/
 html{ 
     box-sizing: border-box;
@@ -8,6 +20,70 @@ html{
     box-sizing:inherit;
 }
 
+/* Background */
+.main-container {
+  background-color: var(--Cream);
+}
+
+/* Balance container */
+.container-balance {
+  background-color: var(--SoftRed);
+  border-radius: 0.6rem;
+}
+
+.my-balance {
+  color: var(--Cream);
+  font-size: 0.9rem;
+}
+
+.balance-value {
+  color: var(--Cream);
+  font-size: 1.4rem;
+}
+
+/* "Big" (chart) container */
+.container-chart {
+  background-color: var(--PaleOrange);
+  border-radius: 0.6rem;
+}
+
+h1 {
+  font-size: 1.4rem!important;
+  color: var(--DarkBrown);
+}
+
+.value-div {
+  background-color: var(--SoftRed);
+}
+
+.day {
+  font-size: 0.8rem;
+  color: var(--MediumBrown)
+}
+
+.total-text {
+  font-size: 0.8rem;
+  color: var(--MediumBrown)
+}
+
+.total-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--DarkBrown);
+}
+
+.percent {
+  color: var(--DarkBrown);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.last-month {
+  font-size: 0.9rem;
+  color: var(--MediumBrown)
+}
+
+/* Footer */
 .attribution {
     font-size: 11px;
     text-align: center;
