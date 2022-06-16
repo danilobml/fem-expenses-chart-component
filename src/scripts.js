@@ -1,6 +1,13 @@
 import data from "../data.json" assert { type: "json" };
-const days = document.getElementsByClassName("day");
-const arrDays = [].slice.call(days);
+const dayDivs = document.getElementsByClassName("day");
+const arrDayDivs = [].slice.call(dayDivs);
+
+function getDays() {
+  arrDayDivs.map((day, index) => {
+    day.textContent = data[index].day;
+  });
+}
+getDays();
 
 function getHigher() {
   const amounts = data.map((x) => (x = x.amount));
@@ -11,7 +18,7 @@ function getHigher() {
 }
 
 function getBars() {
-  arrDays.map((day) => {
+  arrDayDivs.map((day) => {
     const weekDay = day.textContent;
     const foundDay = data.find((x) => x.day === weekDay);
     const foundAmount = foundDay.amount;
