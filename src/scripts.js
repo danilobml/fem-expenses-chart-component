@@ -10,7 +10,7 @@ function getHigher() {
   return higherAmount;
 }
 
-function getAmounts() {
+function getBars() {
   arrDays.map((day) => {
     const weekDay = day.textContent;
     const foundDay = data.find((x) => x.day === weekDay);
@@ -21,9 +21,14 @@ function getAmounts() {
     if (foundAmount == higherAmount) {
       valueDiv.style = `background-color: hsl(186, 34%, 60%); height: ${foundAmount * 3}px; width: 35px; border-radius: 4px;`;
     } else {
-      valueDiv.style = `height: ${foundAmount * 3}px; width: 35px; border-radius: 4px;`;
+      valueDiv.style = `height: ${foundAmount * 2}px; width: 35px; border-radius: 4px;`;
     }
     day.prepend(valueDiv);
+    const displayValue = document.createElement("div");
+    displayValue.textContent = `$${foundAmount}`;
+    displayValue.style = "padding: 3px 5px; background-color: hsl(25, 47%, 15%); border-radius:4px; font-weight: 700; font-size: 0.75rem; color: hsl(27, 66%, 92%); position: absolute; top:-33px; left: -10px;";
+    displayValue.classList.add("hide");
+    valueDiv.prepend(displayValue);
   });
 }
-getAmounts();
+getBars();

@@ -58,7 +58,12 @@ h1 {
 
 .day {
   font-size: 0.8rem;
-  color: var(--MediumBrown)
+  color: var(--MediumBrown);
+  position: relative;
+}
+
+.hide {
+  display: none;
 }
 
 .total-text {
@@ -90,4 +95,20 @@ h1 {
   }
   .attribution a {
     color: hsl(228, 45%, 44%);
+  }
+
+  @media screen and (min-width: 376px) {
+    .container-balance {
+      max-width: 420px!important;
+    }
+    .container-chart {
+      max-width: 420px!important;
+    }
+    .value-div:hover {
+      filter: brightness(1.3);
+    }
+
+    .value-div:hover > .hide {
+      display: block;
+    }
   }
